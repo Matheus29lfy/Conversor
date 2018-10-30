@@ -28,17 +28,18 @@ public class Swing extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSplitPane1 = new javax.swing.JSplitPane();
         txtArabe = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         btnArabe = new javax.swing.JButton();
-        btnRomano = new javax.swing.JButton();
-        txtRomano = new javax.swing.JTextField();
         txtConverteArabe = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        txtArabeCon = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        txtRomano = new javax.swing.JTextField();
+        txtRomanoConvertido = new javax.swing.JTextField();
+        btnConverteRomano = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,25 +51,10 @@ public class Swing extends javax.swing.JFrame {
 
         jLabel1.setText("Entre com valor Árabe: ");
 
-        jLabel2.setText("Entre com valor Romano: ");
-
         btnArabe.setText("Converte arabe");
         btnArabe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnArabeActionPerformed(evt);
-            }
-        });
-
-        btnRomano.setText("Converte Romano");
-        btnRomano.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRomanoActionPerformed(evt);
-            }
-        });
-
-        txtRomano.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtRomanoActionPerformed(evt);
             }
         });
 
@@ -81,9 +67,24 @@ public class Swing extends javax.swing.JFrame {
 
         jLabel3.setText("Valor Convertido:");
 
-        jLabel5.setText("Valor Convertido:");
-
         jLabel4.setText("Conversor Romano e Árabe");
+
+        jLabel6.setText("Entre com valor Romano: ");
+
+        jLabel7.setText("Valor Convertido:");
+
+        txtRomanoConvertido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRomanoConvertidoActionPerformed(evt);
+            }
+        });
+
+        btnConverteRomano.setText("Converte Romano");
+        btnConverteRomano.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConverteRomanoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -91,63 +92,67 @@ public class Swing extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel5)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtArabeCon, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
-                        .addComponent(btnRomano)
-                        .addGap(25, 25, 25))
+                        .addComponent(txtArabe, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(156, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtConverteArabe, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnArabe))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtRomano, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtArabe, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                        .addComponent(btnArabe, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(134, 134, 134)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(134, 134, 134)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6))
+                        .addGap(1, 1, 1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtRomano, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtRomanoConvertido, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnConverteRomano)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtArabe, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtArabe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtConverteArabe, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtConverteArabe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(btnArabe, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(25, 25, 25)
+                        .addComponent(btnArabe)))
                 .addGap(58, 58, 58)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(txtRomano, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnRomano, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(txtArabeCon, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60))
+                    .addComponent(jLabel6)
+                    .addComponent(txtRomano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(txtRomanoConvertido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnConverteRomano)
+                .addGap(52, 52, 52))
         );
 
         pack();
@@ -157,93 +162,40 @@ public class Swing extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtArabeActionPerformed
 
-    private void txtRomanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRomanoActionPerformed
-
-
-    }//GEN-LAST:event_txtRomanoActionPerformed
-
     private void btnArabeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArabeActionPerformed
-          
-        String entrada = txtArabe.getText();
-         int[] varNumeral = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        
+        String a =  " erro";
+        ConverteArabico ca = new ConverteArabico();
+         txtConverteArabe.setEditable(false);
 
-        String[] varRomano = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
-
-             
-            
-        while (true) {
-
-            int numero = Integer.parseInt(entrada);
-            if (numero == 0)                 
-            break;
-           
-            int i = 0;
-            
-              while (numero > 0) {
-                if (numero >= varNumeral[i]) {
-                    System.out.print(varRomano[i]);
-                    numero -= varNumeral[i];
-                } else {
-                    i++;
-                }
-                         txtConverteArabe.setText((varRomano[i]));
-
-                       }
-            break;
+        String p = ca.converte(Integer.parseInt(txtArabe.getText()));
+        if (p == null){
+        txtConverteArabe.setText(a);
+ 
         }
+        txtConverteArabe.setText(p);
+
+      
+      
     }//GEN-LAST:event_btnArabeActionPerformed
 
     private void txtConverteArabeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConverteArabeActionPerformed
 
-
     }//GEN-LAST:event_txtConverteArabeActionPerformed
 
-    private void btnRomanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRomanoActionPerformed
+    private void btnConverteRomanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConverteRomanoActionPerformed
 
-        String romano = txtRomano.getText();
-        
-        char rom[]= {' ','I','V','X','L','C','D','M'}; 
+       ConverteRomano cr = new  ConverteRomano();
+       
+       int c =  cr.desconverte(txtRomano.getText());
+       txtRomanoConvertido.setText(Integer.toString(c));
+       txtRomanoConvertido.setEditable(false);
 
-        int valor[] = {0,1,5,10,50,100,500,1000};
+    }//GEN-LAST:event_btnConverteRomanoActionPerformed
 
-        int anterior = 0;
-
-        int soma = 0;
-
-        char letra = ' ';
-        
-        int l = 0;
-        
-          txtArabeCon.setText("Entre com valor valido");
-      
-        for(int i = 0; i < romano.length(); i++){
-                letra = romano.charAt(i);
-
-                for(int j = 0; j < rom.length; j++){
-
-                    if(letra == rom[j]){                
-
-                                soma +=  valor [j]; 
-
-                            if( anterior < valor[j]){ 
-                                    anterior = valor[j]; 
-
-                            }else { 
-
-                        anterior = valor[j];
-
- }
-
-                    }              
-
-                }
-
-        }
-
-        txtArabeCon.setText(Integer.toString(soma));
-
-
-    }//GEN-LAST:event_btnRomanoActionPerformed
+    private void txtRomanoConvertidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRomanoConvertidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRomanoConvertidoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -282,15 +234,16 @@ public class Swing extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnArabe;
-    private javax.swing.JButton btnRomano;
+    private javax.swing.JButton btnConverteRomano;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JTextField txtArabe;
-    private javax.swing.JTextField txtArabeCon;
     private javax.swing.JTextField txtConverteArabe;
     private javax.swing.JTextField txtRomano;
+    private javax.swing.JTextField txtRomanoConvertido;
     // End of variables declaration//GEN-END:variables
 }
